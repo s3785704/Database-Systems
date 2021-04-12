@@ -1,0 +1,33 @@
+Preprocess Begin
+Preprocess End
+Created table "id_table.csv" with fields [ID,Date_Time,Sensor_ID]. primary_key = "ID"
+Created table "date_time_table.csv" with fields [Date_Time,Sensor_ID,Year,Month,Mdate.Day,Time,Hourly_Counts]. primary_key = "Date_TimeSensor_ID"
+Created table "sensor_table.csv" with fields [Sensor_ID,Sensor_Name]. primary_key = "Sensor_ID"
+Date_time table size is 
+188M	date_time_table.csv
+Importing date_time into mongodob
+
+real	1m2.057s
+user	0m41.820s
+sys	0m2.372s
+id_table size is 
+115M	id_table.csv
+Importing id_table into mongodb
+
+real	0m44.443s
+user	0m27.216s
+sys	0m2.040s
+Sensor table size is 
+4.0K	sensor_table.csv
+Importing sensor table into mongodb
+
+real	0m0.053s
+user	0m0.004s
+sys	0m0.000s
+original table size is 
+291M	pedestrian.csv
+Importing pedestrian table into mongodb
+
+real	1m14.526s
+user	0m52.864s
+sys	0m2.536s
