@@ -1,6 +1,7 @@
 //Manav -s3785704
 import java.io.*;
 import java.math.*;
+import java.lang.*;
 
 class dbload{
   public static byte[] get_string_byte(String str){
@@ -15,20 +16,32 @@ class dbload{
   public static void main(String[] args){
 	  int total_pages_written = 0;
 	  int j = 0;
-    try{
 	  int page_size = Integer.parseInt(args[1]);
 	  byte [] record = new byte[104];
 	  byte [] page = new byte[page_size];
+	  int records = 0;
+	  int count =0; 
+	  int i;
+	  int page_beg =4;
+	  int max_count =0;
+	  int blocking_factor = 9;
+	  byte dummy = 0;
+	  byte [] bytes;
+	  long start_time = 0,end_time =0;
+    try{
 	  FileReader fr = new FileReader(args[2]);
 	  BufferedReader br = new BufferedReader(fr);
 	  String line;
 	  String[] arrStr ;
-	  int i;
-	  int page_beg =4;
-	  int records = 0;
-	  int count =0; 
-	  int max_count =0;
-	  OutputStream outputStream = new FileOutputStream("heap.1024");
+	  String filename = "heap." + args[1];
+	  OutputStream outputStream = new FileOutputStream(filename);
+
+	  //Calculate blocking factor 
+	  float block_f = page_size/(float)103;
+	  blocking_factor = Math.round((float)Math.floor(block_f));
+	  //System.out.println("BF = "+blocking_factor);
+
+	  start_time = System.currentTimeMillis();
 
 
 
@@ -41,8 +54,6 @@ class dbload{
 		//	System.out.println(a);
 		//}
 		//ID field is 4 bytes 
-		byte [] bytes;
-		byte dummy = 0;
 	  	//System.out.println("BYTES = "+bytes[0]);
 	  	//System.out.println("BYTES = "+a);
 		int rec=0;
@@ -140,8 +151,8 @@ class dbload{
 		}
 		records++;
         
-		if(records == 9){
-		    bytes = get_num_byte(Integer.toString(9));
+		if(records == blocking_factor){
+		    bytes = get_num_byte(Integer.toString(blocking_factor));
 			for(i=0;i < bytes.length; i++){
 		  		page[i] = bytes[i];
 			}
@@ -151,7 +162,7 @@ class dbload{
 		      }
 			outputStream.write(page);
 			records =0;
-			page_beg = 0;
+			page_beg = 4;
 			total_pages_written++;
 		}
 
@@ -159,18 +170,35 @@ class dbload{
 		  max_count = count;
 		}
 
-		if(j % 1000 == 0){
-	  	   System.out.println("Processed  "+ j);
-		}
+		//if(j % 1000 == 0){
+	  	  // System.out.println("Processed  "+ j);
+		//}
 
 	  }
-	  	System.out.println("Max Count  "+ max_count );
+	     if(records > 0 ){
+		    bytes = get_num_byte(Integer.toString(records));
+			for(i=0;i < bytes.length; i++){
+		  		page[i] = bytes[i];
+			}
+			int k;
+		      for(k=0; k <  4-bytes.length;k++){
+		          page[i+k] = dummy;
+		      }
+			outputStream.write(page);
+			records =0;
+			page_beg = 4;
+			total_pages_written++;
+		 }
+	    end_time = System.currentTimeMillis();
+	  	//System.out.println("Max Count  "+ max_count );
 	}catch(IOException e){
 	  	System.out.println("Exception happened"+ j );
 	}
 
-	  	System.out.println("PAGES = "+ total_pages_written );
-	  	System.out.println("Records Processed = "+ j );
+	  	System.out.println("Page Size         = "+ page_size );
+	  	System.out.println("Total pages       = "+ total_pages_written );
+	  	System.out.println("Records Processed = "+ (j-1) );
+	  	System.out.println("Time taken        = "+ (end_time - start_time) + " milliseconds" );
 
   }
 }
