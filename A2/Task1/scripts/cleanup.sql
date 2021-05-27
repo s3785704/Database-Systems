@@ -1,0 +1,13 @@
+connect 'jdbc:derby:A1';
+drop table noindex.sysxplain_resultsets;
+drop table noindex.sysxplain_resultset_timings;
+drop table noindex.sysxplain_scan_props;
+drop table noindex.sysxplain_sort_props;
+drop table noindex.sysxplain_statements;
+drop table withindex.sysxplain_resultsets;
+drop table withindex.sysxplain_resultset_timings;
+drop table withindex.sysxplain_scan_props;
+drop table withindex.sysxplain_sort_props;
+drop table withindex.sysxplain_statements;
+drop index hr_count;
+exit;
