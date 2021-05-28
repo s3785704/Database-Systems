@@ -5,12 +5,34 @@ import java.nio.ByteBuffer;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class LeafNode{
-  String key;
-  int ;
-}
+
 
 public class treeload {
+    private class BTree{
+
+		private class LeafNode{
+      		String key;
+  	  		long offset;
+
+      		public LeafNode(String key, long offset ){
+        		this.key    = key;
+        		this.offset = offset;
+      		}
+      		//Key    => 24 bytes 
+      		//Offset => 8  bytes 
+      		//So 32 bytes total for each record 
+      		//1024 pagesize implies 1024/32 = 2^10/2^5 = 2^5 = 32 entries So order is around 16
+    	}
+
+	  	private class InternalNode{
+	  		//Keys and pointers for the same 
+	  	}
+		private InternalNode root;
+
+		public BTree(){
+		 	root = null;
+		}
+	}
 
     // Reads in a binary file of the argument-specified pagesize, prints out matching records
     public static void main(String[] args) throws IOException {
