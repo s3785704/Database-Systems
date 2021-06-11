@@ -1,0 +1,60 @@
+ij version 10.14
+ij> ij> 0 rows inserted/updated/deleted
+ij> 0 rows inserted/updated/deleted
+ij> 0 rows inserted/updated/deleted
+ij> RECORDI&|MYEAR      |MMONTH   |MDATE      |MDAY     |TIME       |HOURLY_COU&
+----------------------------------------------------------------------------
+1826865 |2017       |April    |25         |Tuesday  |18         |7777       
+2949080 |2019       |December |18         |Wednesday|17         |11612      
+
+2 rows selected
+ij> RECORDI&|MYEAR      |MMONTH   |MDATE      |MDAY     |TIME       |HOURLY_COU&
+----------------------------------------------------------------------------
+1826865 |2017       |April    |25         |Tuesday  |18         |7777       
+2949080 |2019       |December |18         |Wednesday|17         |11612      
+
+2 rows selected
+ij> RECORDI&|MYEAR      |MMONTH   |MDATE      |MDAY     |TIME       |HOURLY_COU&
+----------------------------------------------------------------------------
+1826865 |2017       |April    |25         |Tuesday  |18         |7777       
+2949080 |2019       |December |18         |Wednesday|17         |11612      
+
+2 rows selected
+ij> 1          
+-----------
+103        
+
+1 row selected
+ij> 1          
+-----------
+103        
+
+1 row selected
+ij> 1          
+-----------
+103        
+
+1 row selected
+ij> 0 rows inserted/updated/deleted
+ij> 0 rows inserted/updated/deleted
+ij> > > STMT_TEXT                                                                                                                       |EXECUTE_TIME        
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+select * from recordings where hourly_counts = 11612 or hourly_counts=7777                                                      |7818                
+select * from recordings where hourly_counts = 11612 or hourly_counts=7777                                                      |7075                
+select * from recordings where hourly_counts = 11612 or hourly_counts=7777                                                      |6773                
+select count(hourly_counts) from recordings where hourly_counts >= 11612 or hourly_counts >=7777                                |3630                
+select count(hourly_counts) from recordings where hourly_counts >= 11612 or hourly_counts >=7777                                |4594                
+select count(hourly_counts) from recordings where hourly_counts >= 11612 or hourly_counts >=7777                                |4544                
+
+6 rows selected
+ij> SCAN_OBJECT_NAME                                                                                                                |SCAN_TY&|NO_VISITED&|NO_VISITED&|NO_QUALIFI&|BTREE_HEIG&|FETCH_SIZE 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+RECORDINGS                                                                                                                      |HEAP    |71652      |3574594    |3574594    |NULL       |16         
+RECORDINGS                                                                                                                      |HEAP    |71652      |3574594    |3574594    |NULL       |16         
+RECORDINGS                                                                                                                      |HEAP    |71652      |3574594    |3574594    |NULL       |16         
+RECORDINGS                                                                                                                      |HEAP    |71652      |3574594    |103        |NULL       |16         
+RECORDINGS                                                                                                                      |HEAP    |71652      |3574594    |103        |NULL       |16         
+RECORDINGS                                                                                                                      |HEAP    |71652      |3574594    |103        |NULL       |16         
+
+6 rows selected
+ij> 

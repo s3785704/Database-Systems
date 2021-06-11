@@ -3,13 +3,14 @@ connect 'jdbc:derby:A1';
 CALL SYSCS_UTIL.SYSCS_SET_RUNTIMESTATISTICS(1);
 CALL SYSCS_UTIL.SYSCS_SET_STATISTICS_TIMING(1);
 CALL SYSCS_UTIL.SYSCS_SET_XPLAIN_SCHEMA('NOINDEX');
-select count(hourly_counts) from recordings where hourly_counts >= 11612 ;
-select count(hourly_counts) from recordings where hourly_counts >= 11612 ;
-select count(hourly_counts) from recordings where hourly_counts >= 11612 ;
+select * from recordings where hourly_counts = 11612 or hourly_counts=7777;
+select * from recordings where hourly_counts = 11612 or hourly_counts=7777;
+select * from recordings where hourly_counts = 11612 or hourly_counts=7777;
+select count(hourly_counts) from recordings where hourly_counts >= 11612 or hourly_counts >=7777;
+select count(hourly_counts) from recordings where hourly_counts >= 11612 or hourly_counts >=7777;
+select count(hourly_counts) from recordings where hourly_counts >= 11612 or hourly_counts >=7777;
 CALL SYSCS_UTIL.SYSCS_SET_RUNTIMESTATISTICS(0);
 CALL SYSCS_UTIL.SYSCS_SET_STATISTICS_TIMING(0);
-
-
 
 select s.stmt_text,st.execute_time from noindex.sysxplain_statements s,
 noindex.sysxplain_statement_timings st

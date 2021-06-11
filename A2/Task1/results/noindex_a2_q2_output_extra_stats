@@ -1,0 +1,36 @@
+ij version 10.14
+ij> ij> 0 rows inserted/updated/deleted
+ij> 0 rows inserted/updated/deleted
+ij> 0 rows inserted/updated/deleted
+ij> 1          
+-----------
+5          
+
+1 row selected
+ij> 1          
+-----------
+5          
+
+1 row selected
+ij> 1          
+-----------
+5          
+
+1 row selected
+ij> 0 rows inserted/updated/deleted
+ij> 0 rows inserted/updated/deleted
+ij> > > STMT_TEXT                                                                                                                       |EXECUTE_TIME        
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+select count(hourly_counts) from recordings where hourly_counts >= 11612                                                        |3747                
+select count(hourly_counts) from recordings where hourly_counts >= 11612                                                        |4438                
+select count(hourly_counts) from recordings where hourly_counts >= 11612                                                        |4566                
+
+3 rows selected
+ij> SCAN_OBJECT_NAME                                                                                                                |SCAN_TY&|NO_VISITED&|NO_VISITED&|NO_QUALIFI&|BTREE_HEIG&|FETCH_SIZE 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+RECORDINGS                                                                                                                      |HEAP    |71652      |3574594    |5          |NULL       |16         
+RECORDINGS                                                                                                                      |HEAP    |71652      |3574594    |5          |NULL       |16         
+RECORDINGS                                                                                                                      |HEAP    |71652      |3574594    |5          |NULL       |16         
+
+3 rows selected
+ij> 

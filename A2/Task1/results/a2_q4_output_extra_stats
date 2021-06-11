@@ -1,0 +1,36 @@
+ij version 10.14
+ij> ij> 0 rows inserted/updated/deleted
+ij> 0 rows inserted/updated/deleted
+ij> 0 rows inserted/updated/deleted
+ij> 1          
+-----------
+170243474  
+
+1 row selected
+ij> 1          
+-----------
+170243474  
+
+1 row selected
+ij> 1          
+-----------
+170243474  
+
+1 row selected
+ij> 0 rows inserted/updated/deleted
+ij> 0 rows inserted/updated/deleted
+ij> > > STMT_TEXT                                                                                                                       |EXECUTE_TIME        
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+select sum(hourly_counts)  from recordings where mMonth = 'November'                                                            |4127                
+select sum(hourly_counts)  from recordings where mMonth = 'November'                                                            |4486                
+select sum(hourly_counts)  from recordings where mMonth = 'November'                                                            |4547                
+
+3 rows selected
+ij> SCAN_OBJECT_NAME                                                                                                                |SCAN_TY&|NO_VISITED&|NO_VISITED&|NO_QUALIFI&|BTREE_HEIG&|FETCH_SIZE 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+RECORDINGS                                                                                                                      |HEAP    |71652      |3574594    |302830     |NULL       |16         
+RECORDINGS                                                                                                                      |HEAP    |71652      |3574594    |302830     |NULL       |16         
+RECORDINGS                                                                                                                      |HEAP    |71652      |3574594    |302830     |NULL       |16         
+
+3 rows selected
+ij> 

@@ -1,0 +1,45 @@
+ij version 10.14
+ij> ij> 0 rows inserted/updated/deleted
+ij> 0 rows inserted/updated/deleted
+ij> 0 rows inserted/updated/deleted
+ij> ERROR 42X01: Syntax error: Encountered "from" at line 1, column 23.
+Issue the 'help' command for general information on IJ command syntax.
+Any unrecognized commands are treated as potential SQL commands and executed directly.
+Consult your DBMS server reference documentation for details of the SQL syntax supported by your server.
+ij> ERROR 42X01: Syntax error: Encountered "from" at line 1, column 23.
+Issue the 'help' command for general information on IJ command syntax.
+Any unrecognized commands are treated as potential SQL commands and executed directly.
+Consult your DBMS server reference documentation for details of the SQL syntax supported by your server.
+ij> ERROR 42X01: Syntax error: Encountered "from" at line 1, column 23.
+Issue the 'help' command for general information on IJ command syntax.
+Any unrecognized commands are treated as potential SQL commands and executed directly.
+Consult your DBMS server reference documentation for details of the SQL syntax supported by your server.
+ij> 0 rows inserted/updated/deleted
+ij> 0 rows inserted/updated/deleted
+ij> 0 rows inserted/updated/deleted
+ij> 0 rows inserted/updated/deleted
+ij> 0 rows inserted/updated/deleted
+ij> 0 rows inserted/updated/deleted
+ij> ERROR 42X01: Syntax error: Encountered "from" at line 1, column 23.
+Issue the 'help' command for general information on IJ command syntax.
+Any unrecognized commands are treated as potential SQL commands and executed directly.
+Consult your DBMS server reference documentation for details of the SQL syntax supported by your server.
+ij> ERROR 42X01: Syntax error: Encountered "from" at line 1, column 23.
+Issue the 'help' command for general information on IJ command syntax.
+Any unrecognized commands are treated as potential SQL commands and executed directly.
+Consult your DBMS server reference documentation for details of the SQL syntax supported by your server.
+ij> ERROR 42X01: Syntax error: Encountered "from" at line 1, column 23.
+Issue the 'help' command for general information on IJ command syntax.
+Any unrecognized commands are treated as potential SQL commands and executed directly.
+Consult your DBMS server reference documentation for details of the SQL syntax supported by your server.
+ij> 0 rows inserted/updated/deleted
+ij> 0 rows inserted/updated/deleted
+ij> > > STMT_TEXT                                                                                                                       |EXECUTE_TIME        
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+0 rows selected
+ij> > > STMT_TEXT                                                                                                                       |EXECUTE_TIME        
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+0 rows selected
+ij> 
